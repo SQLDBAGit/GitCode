@@ -1,0 +1,9 @@
+{
+	"name": "SSISGigaFactory",
+	"location": "EastUS",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d5d3dd53-5491-4c28-a2c4-d27fde7011b1",
+		"tenantId": "5b573c69-0f32-4716-a1c6-ee78de45f99e"
+	}
+}
