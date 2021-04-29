@@ -1,0 +1,71 @@
+{
+	"name": "P1_orchestration_recipe_5_Child",
+	"properties": {
+		"activities": [
+			{
+				"name": "Get Email Recipients",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "Select * From EmailRecipient",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "AzureSqlTables",
+						"type": "DatasetReference",
+						"parameters": {
+							"tablename": "EmailRecipient"
+						}
+					}
+				}
+			},
+			{
+				"name": "ForEachEmail",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Email Recipients').output.value",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "SendEmail",
+							"type": "WebActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": "https://prod-02.eastus.logic.azure.com:443/workflows/044cd60ea6474a33afa18e2e4868e0ee/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6SpW8RgUfqmC8qV02EwVNcok6RKpVPgU7YEgFueVTDE",
+								"method": "POST",
+								"headers": {
+									"Content-Type": "application/json"
+								},
+								"body": "@json(concat(' { “EmailAddress\":  \"', item().EmailAddress, '\", \"subject\":  \"ADF Pipeline Failure\", \"messageBody\": \n\"ADF Pipeline Failed”}'))\n"
+							}
+						}
+					]
+				}
+			}
+		],
+		"annotations": []
+	}
+}
