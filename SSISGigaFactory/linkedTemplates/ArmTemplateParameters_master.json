@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "SSISGigaFactory"
+		},
+		"3CAzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"AmazonS31_secretAccessKey": {
+			"value": ""
+		},
+		"AzureBlobCookBook_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageTheFILEs_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseOrchestration_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseTheDATABASE_connectionString": {
+			"value": ""
+		},
+		"InputBlob_connectionString": {
+			"value": ""
+		},
+		"OrchestrationAzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"OutputSQL_connectionString": {
+			"value": ""
+		},
+		"AmazonS31_properties_typeProperties_accessKeyId": {
+			"value": "AKIATPLMCCDRPKUYSW5N"
+		},
+		"AzureBlobStorage4Chicago_sasUri": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://datalakeaccountstorage.dfs.core.windows.net"
+		},
+		"ADFIntegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "bigdatasumma.database.windows.net"
+		},
+		"ADFIntegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "sqladmin"
+		},
+		"ADFIntegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
