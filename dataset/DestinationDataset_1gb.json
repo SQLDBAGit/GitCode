@@ -1,0 +1,19 @@
+{
+	"name": "DestinationDataset_1gb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "3CAzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Output.txt",
+				"folderPath": "Backups",
+				"container": "sqlbackup-container"
+			}
+		}
+	}
+}
