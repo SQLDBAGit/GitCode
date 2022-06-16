@@ -42,7 +42,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SalesOrderDataSetOutput",
+						"referenceName": "3CSalesOrdersDatasetOutput",
 						"type": "DatasetReference"
 					}
 				]
