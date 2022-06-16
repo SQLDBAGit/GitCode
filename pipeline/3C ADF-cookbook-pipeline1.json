@@ -1,0 +1,10 @@
+{
+	"name": "3C ADF-cookbook-pipeline1",
+	"properties": {
+		"description": "ADF-cookbook-pipeline1 ",
+		"folder": {
+			"name": "3Cloud"
+		},
+		"annotations": []
+	}
+}
