@@ -167,7 +167,6 @@
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"fileName": "SalesOrders.txt",
-						"folderPath": "Output",
 						"container": "sqlbackup-container"
 					}
 				}
@@ -190,7 +189,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"folderPath": "Backups",
+						"folderPath": "Output",
 						"container": "sqlbackup-container"
 					}
 				}
