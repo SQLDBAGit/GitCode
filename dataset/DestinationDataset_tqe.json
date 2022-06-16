@@ -1,0 +1,18 @@
+{
+	"name": "DestinationDataset_tqe",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "3CAzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Output",
+				"container": "sqlbackup-container"
+			}
+		}
+	}
+}
