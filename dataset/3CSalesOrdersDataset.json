@@ -2,7 +2,7 @@
 	"name": "3CSalesOrdersDataset",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage3",
+			"referenceName": "AzureBlobStorage2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "SalesOrders.txt",
+				"folderPath": "Backups",
 				"container": "sqlbackup-container"
 			}
 		}
