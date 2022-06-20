@@ -27,14 +27,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'OutputSQL'"
 		},
-		"3COrchestrationAzureBlobStorage1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of '3COrchestrationAzureBlobStorage1'"
-		},
-		"3CAzureSqlDatabase1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of '3CAzureSqlDatabase1'"
-		},
 		"AmazonS31_properties_typeProperties_accessKeyId": {
 			"type": "string",
 			"defaultValue": "AKIATPLMCCDRPKUYSW5N"
@@ -152,32 +144,6 @@
 						"edition": "Standard",
 						"licenseType": "BasePrice"
 					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/3COrchestrationAzureBlobStorage1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('3COrchestrationAzureBlobStorage1_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/3CAzureSqlDatabase1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('3CAzureSqlDatabase1_connectionString')]"
 				}
 			},
 			"dependsOn": []

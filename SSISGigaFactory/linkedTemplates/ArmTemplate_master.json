@@ -27,14 +27,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'OutputSQL'"
 		},
-		"3COrchestrationAzureBlobStorage1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of '3COrchestrationAzureBlobStorage1'"
-		},
-		"3CAzureSqlDatabase1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of '3CAzureSqlDatabase1'"
-		},
 		"AmazonS31_properties_typeProperties_accessKeyId": {
 			"type": "string",
 			"defaultValue": "AKIATPLMCCDRPKUYSW5N"
@@ -91,12 +83,6 @@
 					},
 					"OutputSQL_connectionString": {
 						"value": "[parameters('OutputSQL_connectionString')]"
-					},
-					"3COrchestrationAzureBlobStorage1_connectionString": {
-						"value": "[parameters('3COrchestrationAzureBlobStorage1_connectionString')]"
-					},
-					"3CAzureSqlDatabase1_connectionString": {
-						"value": "[parameters('3CAzureSqlDatabase1_connectionString')]"
 					},
 					"AmazonS31_properties_typeProperties_accessKeyId": {
 						"value": "[parameters('AmazonS31_properties_typeProperties_accessKeyId')]"
