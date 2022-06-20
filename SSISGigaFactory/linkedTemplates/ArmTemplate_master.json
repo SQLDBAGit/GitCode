@@ -19,9 +19,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage6'"
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
 		"InputBlob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'InputBlob'"
+		},
+		"OrchestrationAzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'OrchestrationAzureBlobStorage1'"
 		},
 		"OutputSQL_connectionString": {
 			"type": "secureString",
@@ -78,8 +86,14 @@
 					"AzureBlobStorage6_connectionString": {
 						"value": "[parameters('AzureBlobStorage6_connectionString')]"
 					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
 					"InputBlob_connectionString": {
 						"value": "[parameters('InputBlob_connectionString')]"
+					},
+					"OrchestrationAzureBlobStorage1_connectionString": {
+						"value": "[parameters('OrchestrationAzureBlobStorage1_connectionString')]"
 					},
 					"OutputSQL_connectionString": {
 						"value": "[parameters('OutputSQL_connectionString')]"
@@ -99,6 +113,26 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "SSISGigaFactory_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'SSISGigaFactory_ArmTemplate_0')]"
+			]
 		}
 	]
 }

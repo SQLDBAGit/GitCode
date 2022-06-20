@@ -14,7 +14,13 @@
 		"AzureBlobStorage6_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
 		"InputBlob_connectionString": {
+			"value": ""
+		},
+		"OrchestrationAzureBlobStorage1_connectionString": {
 			"value": ""
 		},
 		"OutputSQL_connectionString": {
