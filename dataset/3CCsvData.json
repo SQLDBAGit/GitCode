@@ -1,0 +1,40 @@
+{
+	"name": "3CCsvData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "3COrchestrationAzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"container": "sqlbackup-container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Aruba",
+				"type": "String"
+			},
+			{
+				"name": "AW",
+				"type": "String"
+			}
+		]
+	}
+}
