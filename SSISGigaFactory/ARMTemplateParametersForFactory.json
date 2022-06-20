@@ -20,6 +20,12 @@
 		"OutputSQL_connectionString": {
 			"value": ""
 		},
+		"3COrchestrationAzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"3CAzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
 		"AmazonS31_properties_typeProperties_accessKeyId": {
 			"value": "AKIATPLMCCDRPKUYSW5N"
 		},
