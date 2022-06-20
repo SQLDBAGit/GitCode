@@ -55,7 +55,7 @@
 						"referenceName": "3CAzureSQLTables",
 						"type": "DatasetReference",
 						"parameters": {
-							"tableName": "Country"
+							"tableName": "dbo.Country"
 						}
 					}
 				]
