@@ -626,7 +626,14 @@
 					{
 						"name": "Copy From Blob to Azure SQL",
 						"type": "Copy",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "Backup Copy Activity",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -684,14 +691,7 @@
 					{
 						"name": "Backup Copy Activity",
 						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "Copy From Blob to Azure SQL",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
