@@ -715,7 +715,8 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Copy From Blob to Azure SQL",
+						"name": "Copy From Blob to Azure SQL - see desc",
+						"description": "Table is named wrong to mimic failure in the sink tab",
 						"type": "Copy",
 						"dependsOn": [
 							{
@@ -842,7 +843,7 @@
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "Copy From Blob to Azure SQL",
+								"activity": "Copy From Blob to Azure SQL - see desc",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -896,7 +897,7 @@
 						"type": "ExecutePipeline",
 						"dependsOn": [
 							{
-								"activity": "Copy From Blob to Azure SQL",
+								"activity": "Copy From Blob to Azure SQL - see desc",
 								"dependencyConditions": [
 									"Failed"
 								]
@@ -917,7 +918,9 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
-				"annotations": []
+				"annotations": [
+					"Table is named wrong to mimic failure "
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/pl_orchestration_recipe_5_child')]"
