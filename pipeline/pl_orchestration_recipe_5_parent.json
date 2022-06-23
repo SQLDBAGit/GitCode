@@ -201,8 +201,6 @@
 				}
 			}
 		],
-		"annotations": [
-			"Table is named wrong to mimic failure "
-		]
+		"annotations": []
 	}
 }
