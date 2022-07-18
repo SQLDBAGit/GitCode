@@ -35,7 +35,7 @@
 				}
 			},
 			{
-				"name": "FilterOnCsv",
+				"name": "Filter for Backup",
 				"type": "Filter",
 				"dependsOn": [
 					{
@@ -52,7 +52,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@endswith(item().name, '.csv')",
+						"value": "@endswith(item().name, '.backup')",
 						"type": "Expression"
 					}
 				}
@@ -62,7 +62,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "FilterOnCsv",
+						"activity": "Filter for Backup",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -71,7 +71,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('FilterOnCSV').output.Value",
+						"value": "@activity('Filter for Backup').output.Value",
 						"type": "Expression"
 					},
 					"activities": [
