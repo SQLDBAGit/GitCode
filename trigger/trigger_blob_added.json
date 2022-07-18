@@ -1,0 +1,17 @@
+{
+	"name": "trigger_blob_added",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/sqlbackup-container/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/0f458c74-d65f-440f-a303-d72ab0dbc627/resourceGroups/BigDataResGroup/providers/Microsoft.Storage/storageAccounts/sqlbackup9",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
